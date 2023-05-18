@@ -1,0 +1,246 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+  /*primary*/
+  --p:#666bce;
+  --pdark:#494ca1;
+  --pdark2:#353778;
+  --plight:#7378e4;
+  --plight2:#8c90dd;
+  --plight3:#abaedf;
+  /*seccondary*/
+  --s:#ffc938;
+  --slight:#f5d375;
+  /*error*/
+  --etext:#721c24;
+  --e:#f8d7da;
+  --e2:#f5c6cb;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.maindiv{
+  flex-direction: row;
+}
+.mode{
+  background-color: var(--s);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color:black;
+}
+.sicon {
+  height: 40px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+#eicon{
+  height: 30px;
+  margin-right: 5px;
+}
+body{
+  min-height: 100vh;
+  background: linear-gradient(0deg, var(--pdark) 0%, var(--plight2) 100%);
+}
+.wrapperdiv{
+  margin-right: 5vw;
+  margin-left: 5vw;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  justify-content: center;
+}
+::selection{
+  color: #fff;
+  background: var(--pdark2);
+}
+.wrapper{
+  width: 95vw;
+  max-width: 500px;
+  border-radius: 7px;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+.wrapper header{
+  color: var(--s);
+  background-color: var(--pdark);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  align-items: center;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+header i{
+  font-size: 0em;
+  cursor: pointer;
+}
+.wrapper.active header i{
+  font-size: 30px;
+}
+.wrapper .input-part{
+  margin: 20px 25px 30px;
+}
+.wrapper.active .input-part{
+  display: none;
+}
+.input-part .info-txt{
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+.input-part .info-txt.error{
+  color: var(--etext);
+  display: block;
+  background: var(--e);
+  border: 1px solid var(--e2);
+}
+.input-part .info-txt.pending{
+  color: #0c5460;
+  display: block;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+.input-part :where(input, button){
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+.input-part input{
+  text-align: center;
+  padding: 0 15px;
+}
+.input-part input:is(:focus, :valid){
+  border: 2px solid var(--s);
+}
+.input-part .separator{
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.separator::before{
+  content: "or";
+  font-size: 19px;
+  padding: 0 15px;
+}
+.input-part button{
+  color: var(--pdark2);
+  cursor: pointer;
+  background: var(--s);
+  transition: 0.3s ease;
+}
+.input-part button:hover{
+  background: var(--p);
+}
+
+.wrapper .weather-part{
+  display: none;
+  flex-direction: column;
+}
+
+.wrapper.active .weather-part{
+  display: flex;
+}
+.weather-part .todaydate{
+  font-weight: 500;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+.weather-part .main{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.main {
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+}
+.main2{
+  width: 50%;
+  flex-direction: column;
+  margin-right: 5vw;
+}
+.wicon{
+  padding: 5vw;
+  justify-content: center;
+}
+.weather-part img{
+  max-width: 125px;
+  width:30vw;
+}
+.weather-part .main2 .temp{
+  font-weight: 600;
+  text-align: center;
+}
+.weather-part .weather{
+  text-align: center;
+  margin-top: 5px;
+}
+.weather-part .location{
+  margin-top: 5px;
+  text-align: center;
+}
+.location i{
+  margin: 4px 2px 0 0;
+}
+.weather-part .bd1, .weather-part .bd2{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.bd1 .column, .bd2 .column{
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+}
+.column i{
+  font-size: 35px;
+  margin-right: 2px;
+}
+.bd2 .column i{
+margin-left: 10vw;
+margin-right: 10vw;
+}
+.tsunrise, .tsunset{
+  font-weight: 600;
+}
+
+.column .details{
+  margin-left: 3px;
+}
+.details .temp, .column.pressure span{
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: -3px;
+}
+.details .temp .deg{
+  margin: 0;
+  padding: 0 2px 0 1px;
+}
+.column .details p{
+  margin-top: -6px;
+}
+
+

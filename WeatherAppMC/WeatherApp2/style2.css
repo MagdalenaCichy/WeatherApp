@@ -1,0 +1,65 @@
+body{
+  color:black;
+}
+.wrapper{
+  background: #fff;
+}
+.wrapper header{
+  border-bottom: 1px solid var(--pdark2);
+}
+.input-part .separator{
+  background: var(--pdark2);
+}
+.separator::before{
+  color: var(--pdark2);
+  background: #fff;
+}
+.input-part input{
+  background-color:  #fff;
+  border: 1px solid var(--pdark2);
+}
+.input-part input::placeholder{
+  color: #666;
+}
+.weather-part .todaydate{
+  padding-top:2px;
+  padding-bottom:2px;
+  color:var(--pdark2);
+  font-size: 19px;
+}
+.weather-part .main2 .temp{
+  font-size: 38px;
+  color:var(--p);
+}
+.column i{
+  color: var(--p);
+}
+.weather-part .bd1, .weather-part .bd2, .weather-part .main {
+  border-top: 1.5px solid var(--plight2);
+}
+.column.pressure{
+  border-top: 1.5px solid var(--plight2);
+}
+.todaydate .time{
+  color:var(--p);
+}
+.weather-part .location, .location i{
+  font-size: 17px;
+}
+.weather-part .weather, .tsunrise, .tsunset{
+  font-size: 20px;
+}
+.bd1{
+  flex-direction: column;
+  margin-right: 5vw;
+  width:100vw;
+}
+.column .details p, .bd2 p{
+  font-size: 18px;
+}
+.details .temp, .column.pressure span, .details .temp .deg{
+  font-size: 22px;
+}
+.bd1 i{
+  margin-right: 5px;
+}

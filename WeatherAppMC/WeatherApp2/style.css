@@ -1,0 +1,68 @@
+body{
+ color: var(--plight3)
+}
+.wrapper{
+  background: var(--pdark2);
+}
+.wrapper header{
+  border-bottom: 1px solid var(--s);
+}
+.input-part .separator{
+  background: var(--s);
+}
+.separator::before{
+  color: var(--s);
+  background: var(--pdark2);
+}
+.input-part input{
+  background-color:  var(--plight2);
+  border: 1px solid var(--pdark);
+}
+.input-part input::placeholder{
+  color: var(--pdark);
+}
+.weather-part .todaydate{
+  font-size: 16px;
+  padding-top:2px;
+  padding-bottom:2px;
+  color:var(--slight);
+}
+.weather-part .main2 .temp{
+  font-size: 35px;
+  color:var(--s);
+}
+.column i{
+  color: var(--plight3);
+}
+.weather-part .bd1, .weather-part .bd2, .weather-part .main{
+  border-top: 1px solid var(--plight);
+}
+.column.pressure{
+  border-left: 1px solid var(--plight);
+}
+.details {
+  color: #fff;
+}
+.details p{
+  color: var(--plight3);
+}
+.todaydate .time{
+  color:var(--plight3);
+}
+.weather-part img{
+  max-width: 125px;
+  width:30vw;
+  filter: invert(100%);
+}
+.weather-part .location, .location i{
+  font-size: 14px;
+}
+.weather-part .weather, .tsunrise, .tsunset{
+  font-size: 18px;
+}
+.column .details p, .bd2 p{
+  font-size: 14px;
+}
+.details .temp, .column.pressure span, .details .temp .deg{
+  font-size: 18px;
+}
